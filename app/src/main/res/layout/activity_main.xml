@@ -6,13 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/WhiteSmoke">
+
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentCont"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="60dp"/>
+        android:layout_marginBottom="60dp"
+ />
 
     <Button
         android:id="@+id/btn_first"
@@ -23,7 +26,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/SkyBlue"
+        android:backgroundTint="@color/DesertSand"
+        android:textColor="@color/Black"
         android:text="First" />
     <Button
         android:id="@+id/btn_second"

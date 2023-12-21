@@ -6,14 +6,15 @@
     tools:context=".SecondFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/fragment_second"
-        android:textColor="@color/White"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:background="@color/MidnightBlue"
-        />
+        android:orientation="vertical"
+        android:background="@color/LightGold">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
 
 </FrameLayout>

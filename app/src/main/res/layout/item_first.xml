@@ -26,6 +26,7 @@
         android:textSize="14dp"
         android:textStyle="italic"
         android:layout_gravity="center"
+        android:gravity="center"
         />
 
 </LinearLayout>

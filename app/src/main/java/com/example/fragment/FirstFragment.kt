@@ -21,10 +21,14 @@ class FirstFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_first, container, false)
-        init(view)
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        init(view)
+    }
     private fun init(view: View) {
         itemList = ArrayList()
         recyclerView = view.findViewById(R.id.recyclerView)
@@ -37,8 +41,8 @@ class FirstFragment : Fragment() {
         recyclerView.adapter = itemFirstAdapter
     }
     private fun addList(){
-        itemList.add(First("Bask Cheesecake",R.drawable.bask_cheesecake))
-        itemList.add(First("Chocolate Lava",R.drawable.chocolate_lava))
+        itemList.add(First("Bask Cheesecake \nชีสหน้าไหม้",R.drawable.bask_cheesecake))
+        itemList.add(First("Chocolate Lava \nเค้กลาวาช็อกโกแลต",R.drawable.chocolate_lava))
         itemList.add(First("Chewy Brownies",R.drawable.chewy_brownies))
         itemList.add(First("Cinnamon Roll",R.drawable.cinnamon_roll))
         itemList.add(First("French Toast",R.drawable.french_toast))
