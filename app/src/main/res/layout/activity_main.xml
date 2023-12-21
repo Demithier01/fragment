@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentCont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"/>
+
+    <Button
+        android:id="@+id/btn_first"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="First"
+        android:backgroundTint="@color/SkyBlue"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        />
+    <Button
+        android:id="@+id/btn_second"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/PapayaWhip"
+        android:text="Second"
+        android:textColor="@color/Black" />
+    <Button
+        android:id="@+id/btn_third"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Third"
+        android:textColor="@color/Black"
+        android:backgroundTint="@color/GrayCloud"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        />
+
+
+
+
+
+
+
+
+</RelativeLayout>
