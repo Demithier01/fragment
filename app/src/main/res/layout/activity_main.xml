@@ -18,11 +18,13 @@
         android:id="@+id/btn_first"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:text="First"
-        android:backgroundTint="@color/SkyBlue"
-        android:layout_margin="10dp"
         android:layout_alignParentBottom="true"
-        />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/SkyBlue"
+        android:text="First" />
     <Button
         android:id="@+id/btn_second"
         android:layout_width="120dp"
@@ -44,12 +46,5 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         />
-
-
-
-
-
-
-
 
 </RelativeLayout>

@@ -12,11 +12,10 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 class FirstFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var itemList: ArrayList<Int>
+    private lateinit var itemList: ArrayList<First>
     private lateinit var itemFirstAdapter: ItemFirstAdapter
 
     override fun onCreateView(
-
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -38,13 +37,21 @@ class FirstFragment : Fragment() {
         recyclerView.adapter = itemFirstAdapter
     }
     private fun addList(){
-        itemList.add(R.drawable.chocolate_lava)
-        itemList.add(R.drawable.crepe_cake_strawberry)
-        itemList.add(R.drawable.macaron)
-        itemList.add(R.drawable.matcha_greentea_cheesecake)
-        itemList.add(R.drawable.pancakes_raspberries)
-        itemList.add(R.drawable.waffle_ice_cream)
-        itemList.add(R.drawable.tiramisu)
+        itemList.add(First("Bask Cheesecake",R.drawable.bask_cheesecake))
+        itemList.add(First("Chocolate Lava",R.drawable.chocolate_lava))
+        itemList.add(First("Chewy Brownies",R.drawable.chewy_brownies))
+        itemList.add(First("Cinnamon Roll",R.drawable.cinnamon_roll))
+        itemList.add(First("French Toast",R.drawable.french_toast))
+        itemList.add(First("Fruit Cake",R.drawable.fruit_cake))
+        itemList.add(First("Japanese CustardPudding",R.drawable.japanese_custard_pudding))
+        itemList.add(First("Jerry Cheesecake",R.drawable.jerry_cheesecake))
+        itemList.add(First("Macaron",R.drawable.macaron))
+        itemList.add(First("MatchaGreentea Cheesecake",R.drawable.matcha_greentea_cheesecake))
+        itemList.add(First("Orange Cake",R.drawable.orange_cake))
+        itemList.add(First("Pancakes Raspberries",R.drawable.pancakes_raspberries))
+        itemList.add(First("Strawberry CrepeCake ",R.drawable.crepe_cake_strawberry))
+        itemList.add(First("ThaiTea CrepeCake",R.drawable.thai_tea_crepe_cake))
+        itemList.add(First("Tiramisu",R.drawable.tiramisu))
     }
 
 }

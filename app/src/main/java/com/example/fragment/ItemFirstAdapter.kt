@@ -5,16 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ItemFirstAdapter(private val itemList:List<Int>) :
+class ItemFirstAdapter(private val itemList:List<First>) :
 RecyclerView.Adapter<ItemFirstAdapter.ItemViewHolder>(){
-    class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+
+    inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val img : ImageView =itemView.findViewById(R.id.imgView)
+        val textView : TextView = itemView.findViewById(R.id.textView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-       val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_first,parent,false)
+       val view = LayoutInflater.from(parent.context).inflate(R.layout.item_first,parent,false)
         return ItemViewHolder(view)
     }
 
@@ -23,6 +26,7 @@ RecyclerView.Adapter<ItemFirstAdapter.ItemViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        holder.img.setImageResource(itemList[position])
+        holder.img.setImageResource(itemList[position].img)
+        holder.textView.text = itemList[position].name
     }
 }

@@ -11,8 +11,6 @@ class ThirdFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -20,6 +18,5 @@ class ThirdFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_third, container, false)
     }
-
 
 }
