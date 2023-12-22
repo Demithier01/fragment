@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fragment.Model.Second
 
 class ItemSecondAdapter(private var secondList: List<Second>):
     RecyclerView.Adapter<ItemSecondAdapter.SecondViewHolder>() {

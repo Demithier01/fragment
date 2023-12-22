@@ -1,3 +1,3 @@
-package com.example.fragment
+package com.example.fragment.Model
 
 data class First(var name : String, var img : Int)
