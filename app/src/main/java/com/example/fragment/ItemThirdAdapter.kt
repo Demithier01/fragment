@@ -14,11 +14,11 @@ class ItemThirdAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     }
 
     override fun createFragment(position: Int): Fragment {
-        when(position){
-            0 -> return  BingsuFragment()
-            1 -> return  IceCreamFragment()
-            2 -> return  ToastFragment()
-            else -> return BingsuFragment()
+        return when(position){
+            0 -> BingsuFragment()
+            1 -> IceCreamFragment()
+            2 -> ToastFragment()
+            else -> BingsuFragment()
         }
     }
 }
