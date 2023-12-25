@@ -18,8 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // Find views using findViewById
+        
         btnFirst = findViewById(R.id.btn_first)
         btnSecond = findViewById(R.id.btn_second)
         btnThird = findViewById(R.id.btn_third)
