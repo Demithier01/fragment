@@ -5,7 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.viewpager2.widget.ViewPager2
+import com.example.fragment.ItemThirdAdapter
 import com.example.fragment.R
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +40,7 @@ class BingsuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.item_fragment_bingsu, container, false)
+        return inflater.inflate(R.layout.item_third_bingsu, container, false)
     }
 
     companion object {
@@ -57,4 +62,6 @@ class BingsuFragment : Fragment() {
                 }
             }
     }
+
+
 }

@@ -30,10 +30,8 @@ class ThirdFragment : Fragment() {
         val viewPager: ViewPager2 = view.findViewById(R.id.viewPager2)
         val tabLayout: TabLayout = view.findViewById(R.id.tabLayout)
 
-        // Use childFragmentManager and lifecycle of this Fragment
         viewPager.adapter = ItemThirdAdapter(childFragmentManager, lifecycle)
 
-        // Attach TabLayout with ViewPager2
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = tabTitles[position]
         }.attach()

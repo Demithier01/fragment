@@ -35,7 +35,7 @@ class IceCreamFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.item_fragment_ice_cream, container, false)
+        return inflater.inflate(R.layout.item_third_ice_cream, container, false)
     }
 
     companion object {

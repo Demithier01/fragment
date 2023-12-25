@@ -35,7 +35,7 @@ class ToastFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.item_fragment_toast, container, false)
+        return inflater.inflate(R.layout.item_third_toast, container, false)
     }
 
     companion object {
