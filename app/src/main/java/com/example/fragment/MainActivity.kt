@@ -3,6 +3,7 @@ package com.example.fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ReportFragment.Companion.reportFragment
@@ -10,31 +11,35 @@ import com.example.fragment.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var fragmentManager: FragmentManager
-    private lateinit var binding : ActivityMainBinding
 
+    private lateinit var btnFirst: Button
+    private lateinit var btnSecond: Button
+    private lateinit var btnThird: Button
+    private lateinit var fragmentCont: FrameLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        // Find views using findViewById
+        btnFirst = findViewById(R.id.btn_first)
+        btnSecond = findViewById(R.id.btn_second)
+        btnThird = findViewById(R.id.btn_third)
+        fragmentCont = findViewById(R.id.fragmentCont)
 
-        binding.btnFirst.setOnClickListener {
+        btnFirst.setOnClickListener {
             reSultFragment(FirstFragment())
         }
-        binding.btnSecond.setOnClickListener {
+        btnSecond.setOnClickListener {
             reSultFragment(SecondFragment())
         }
-        binding.btnThird.setOnClickListener {
+        btnThird.setOnClickListener {
             reSultFragment(ThirdFragment())
         }
     }
-    private fun reSultFragment(fragment: Fragment){
+
+    private fun reSultFragment(fragment: Fragment) {
         fragmentManager = supportFragmentManager
-        fragmentManager.beginTransaction().replace(R.id.fragmentCont,fragment).commit()
+        fragmentManager.beginTransaction().replace(R.id.fragmentCont, fragment).commit()
     }
-
-
-
 }
