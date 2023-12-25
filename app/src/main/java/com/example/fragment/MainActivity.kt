@@ -6,8 +6,6 @@ import android.widget.Button
 import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.ReportFragment.Companion.reportFragment
-import com.example.fragment.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var fragmentManager: FragmentManager
