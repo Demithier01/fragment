@@ -1,14 +1,13 @@
-package com.example.fragment.third_item
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
 import com.example.fragment.R
 
-class BingsuAdapter(private val imageList: MutableList<Int>, private val viewPager2: ViewPager2)
+class BingsuAdapter(private val imageUrls: MutableList<String>, private val viewPager2: ViewPager2)
     : RecyclerView.Adapter<BingsuAdapter.BingsuViewHolder>() {
 
     class BingsuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -20,20 +19,21 @@ class BingsuAdapter(private val imageList: MutableList<Int>, private val viewPag
         return BingsuViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return imageList.size
-    }
+    override fun getItemCount(): Int = imageUrls.size
 
     override fun onBindViewHolder(holder: BingsuViewHolder, position: Int) {
-        holder.imageView.setImageResource(imageList[position])
-        if (position == imageList.size - 1) {
+        Glide.with(holder.itemView.context)
+            .load(imageUrls[position])
+            .into(holder.imageView)
+
+        if (position == imageUrls.size - 1) {
             viewPager2.post(runnable)
         }
     }
 
     private val runnable = Runnable {
-        val originalSize = imageList.size
-        imageList.addAll(imageList.subList(0, 8))
-        notifyItemRangeInserted(originalSize, 8)
+        val originalSize = imageUrls.size
+        imageUrls.addAll(imageUrls.subList(0, 7))
+        notifyItemRangeInserted(originalSize, 7)
     }
 }

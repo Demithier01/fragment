@@ -1,5 +1,6 @@
 package com.example.fragment.third_item
 
+import BingsuAdapter
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -16,8 +17,8 @@ import com.example.fragment.R
 class BingsuFragment : Fragment() {
     private lateinit var viewPager2: ViewPager2
     private lateinit var handler: Handler
-    private lateinit var imageList: ArrayList<Int>
     private lateinit var adapter: BingsuAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -65,25 +66,27 @@ class BingsuFragment : Fragment() {
     }
 
     private fun init(view: View) {
-        handler = Handler(Looper.myLooper()!!)
-        imageList = ArrayList()
-
-        imageList.add(R.drawable.img_01)
-        imageList.add(R.drawable.img_02)
-        imageList.add(R.drawable.img_03)
-        imageList.add(R.drawable.img_04)
-        imageList.add(R.drawable.img_05)
-        imageList.add(R.drawable.img_06)
-        imageList.add(R.drawable.img_07)
-        imageList.add(R.drawable.img_08)
-
-        adapter = BingsuAdapter(imageList, view.findViewById(R.id.viewPager2))
-
         viewPager2 = view.findViewById(R.id.viewPager2)
+        handler = Handler(Looper.myLooper()!!)
+
+        val imageUrls = mutableListOf(
+            "https://f.ptcdn.info/467/059/000/pe8fyp1u2KWzzTuJad5-o.jpg",
+            "https://www.ryoiireview.com/upload/article/201703/1490937411_1bfe8767df7c3b51ed4a759f42b3dd39.jpg",
+            "https://cdn.pixabay.com/photo/2018/12/11/09/34/bingsu-3868700_1280.jpg",
+            "https://www.ryoiireview.com/upload/article/201802/1517902751_467d516f5e5ba2f0f1a73535a33b2db2.jpg",
+            "https://img.wongnai.com/p/1920x0/2017/05/16/aa2b9594ced4452bb1e2949e9ab2ed38.jpg",
+            "https://www.ryoiireview.com/upload/article/201611/1479353464_d501901ff6df45f06a82566690bb0597.jpg",
+            "https://pbs.twimg.com/media/C4t22TaVMAA51vX.jpg"
+        )
+
+        adapter = BingsuAdapter(imageUrls, viewPager2)
+
+
         viewPager2.adapter = adapter
         viewPager2.offscreenPageLimit = 3
         viewPager2.clipToPadding = false
         viewPager2.clipChildren = false
         viewPager2.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
     }
+
 }

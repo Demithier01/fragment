@@ -41,21 +41,19 @@ class FirstFragment : Fragment() {
         recyclerView.adapter = itemFirstAdapter
     }
     private fun addList(){
-        itemList.add(First("Bask Cheesecake \nชีสหน้าไหม้",R.drawable.bask_cheesecake))
-        itemList.add(First("Chocolate Lava \nเค้กลาวาช็อกโกแลต",R.drawable.chocolate_lava))
-        itemList.add(First("Chewy Brownies",R.drawable.chewy_brownies))
-        itemList.add(First("Cinnamon Roll",R.drawable.cinnamon_roll))
-        itemList.add(First("French Toast",R.drawable.french_toast))
-        itemList.add(First("Fruit Cake",R.drawable.fruit_cake))
-        itemList.add(First("Japanese CustardPudding",R.drawable.japanese_custard_pudding))
-        itemList.add(First("Jerry Cheesecake",R.drawable.jerry_cheesecake))
-        itemList.add(First("Macaron",R.drawable.macaron))
-        itemList.add(First("MatchaGreentea Cheesecake",R.drawable.matcha_greentea_cheesecake))
-        itemList.add(First("Orange Cake",R.drawable.orange_cake))
-        itemList.add(First("Pancakes Raspberries",R.drawable.pancakes_raspberries))
-        itemList.add(First("Strawberry CrepeCake ",R.drawable.crepe_cake_strawberry))
-        itemList.add(First("ThaiTea CrepeCake",R.drawable.thai_tea_crepe_cake))
-        itemList.add(First("Tiramisu",R.drawable.tiramisu))
+        itemList.add(First("Bask Cheesecake \nชีสหน้าไหม้","https://houseofnasheats.com/wp-content/uploads/2023/07/Basque-Cheesecake-1.jpg"))
+        itemList.add(First("Chocolate Lava \nเค้กลาวาช็อกโกแลต","https://nomnompaleo.com/wp-content/uploads/2021/02/800-LavaCakes-aaDSC_9507.jpg"))
+        itemList.add(First("Chewy Brownies","https://hostthetoast.com/wp-content/uploads/2020/02/The-Best-Fudgy-Homemade-Brownies-1.jpg"))
+        itemList.add(First("Cinnamon Roll","https://www.thecookierookie.com/wp-content/uploads/2022/04/Bakery-Style-Cinnamon-Rolls-2-500x500.jpg"))
+        itemList.add(First("French Toast","https://www.dessertfortwo.com/wp-content/uploads/2018/08/brioche-french-toast-9-735x1103.jpg"))
+        itemList.add(First("Fruit Cake","https://therecipecritic.com/wp-content/uploads/2021/11/fruitcake.jpg"))
+        itemList.add(First("Japanese CustardPudding","https://www.chopstickchronicles.com/wp-content/uploads/2016/05/Purin-2-4.jpg"))
+        itemList.add(First("Jerry Cheesecake","https://shopee.co.th/blog/wp-content/uploads/2021/07/pic2-1.jpg"))
+        itemList.add(First("Macaron","https://www.foxyfolksy.com/wp-content/uploads/2014/07/french-macarons-1200t.jpg"))
+        itemList.add(First("MatchaGreentea Cheesecake","https://cdn.kuali.com/wp-content/uploads/2020/04/30181956/13.-Green-Tea-Bake-Cheesecake-281.jpg"))
+        itemList.add(First("Pancakes Raspberries","https://berryworld.imgix.net/assets/raspberrypancake_interactive-Large.jpg?auto=format&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=1500&ixlib=php-3.1.0&q=60&v=1634218605&w=2300"))
+        itemList.add(First("Strawberry CrepeCake ","https://healthytasteoflife.com/wp-content/uploads/2022/05/strawberry-crepe-cake-featured-image-1.jpg"))
+        itemList.add(First("Creme Brulee \nแครมบรูว์เล","https://www.recipetineats.com/wp-content/uploads/2016/09/Creme-Brulee_8-SQ.jpg"))
     }
 
 }

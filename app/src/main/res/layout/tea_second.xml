@@ -7,9 +7,9 @@
     app:cardCornerRadius="10dp">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"/>
+        android:scaleType="fitXY"/>
 
 </androidx.cardview.widget.CardView>
