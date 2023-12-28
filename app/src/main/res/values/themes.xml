@@ -3,6 +3,7 @@
     <style name="Base.Theme.Fragment" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/LightPurpleBlue</item>
+        <item name="android:statusBarColor" tools:targeApi="l">@color/Sienna</item>
     </style>
 
     <style name="Theme.Fragment" parent="Base.Theme.Fragment" />
