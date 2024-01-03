@@ -1,34 +1,27 @@
 package com.example.fragment.third_item
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide.init
+import com.example.fragment.ItemSecondAdapter
+import com.example.fragment.Model.Second
+import com.example.fragment.Model.Toast
 import com.example.fragment.R
+import com.example.fragment.TeaSecondAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ToastFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ToastFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var toastAdapter: ToastAdapter
+    private lateinit var toastRecyclerView: RecyclerView
+    private lateinit var toastList: ArrayList<Toast>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,24 +30,30 @@ class ToastFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.item_third_toast, container, false)
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        init(view)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ToastFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ToastFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    }
+    private fun init(view: View) {
+        toastList = ArrayList()
+        toastRecyclerView= view.findViewById(R.id.reView)
+        toastRecyclerView.setHasFixedSize(true)
+        toastRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        addList()
+        toastAdapter = ToastAdapter(toastList)
+        toastRecyclerView.adapter = toastAdapter
+    }
+    private fun addList() {
+        toastList.add(Toast("Honey Toast", "https://janjirainchuan.files.wordpress.com/2015/02/1416480302.jpeg"))
+        toastList.add(Toast("French Toast", "https://sugarspunrun.com/wp-content/uploads/2023/08/French-Toast-recipe-1-of-1.jpg"))
+        toastList.add(Toast("Toast Cream Egg Salted", "https://www.gourmetandcuisine.com/Images/editor_upload/_editor20191007034859_original.jpg"))
+        toastList.add(Toast("Purple Sweet Potato Custard", "https://img.wongnai.com/p/1920x0/2017/08/22/9cc38ea0bbbb4c6795194a08e63030b2.jpg"))
+        toastList.add(Toast("FrenchToastSticks", "https://www.pholfoodmafia.com/wp-content/uploads/2018/07/1500x924CinnamonFrenchToastSticks.jpg"))
+        toastList.add(Toast("Pizza Toast", "https://www.pholfoodmafia.com/wp-content/uploads/2020/10/4Ham-Cheese-Pizza-Toast.jpg"))
+        toastList.add(Toast("Marshmallow Toast", "https://i.ytimg.com/vi/PagW5Zi51ho/maxresdefault.jpg"))
+        toastList.add(Toast("Brown Sugar Toast " , "https://www.proudsugarofficial.com/application/files/cache/thumbnails/571df42bd6821e340e391a35402b7692.jpg"))
+
     }
 }

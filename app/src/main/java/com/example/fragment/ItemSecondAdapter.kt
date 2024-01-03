@@ -6,22 +6,28 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.fragment.Model.Second
+import com.example.fragment.databinding.ItemSecondBinding
 
 class ItemSecondAdapter(private var secondList: List<Second>):
     RecyclerView.Adapter<ItemSecondAdapter.SecondViewHolder>() {
-        class SecondViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-            var menu : TextView = itemView.findViewById(R.id.textName)
-            var image : ImageView = itemView.findViewById(R.id.image)
+        class SecondViewHolder(private val binding: ItemSecondBinding): RecyclerView.ViewHolder(binding.root){
+            var menu : TextView = binding.textName
+            var image : ImageView = binding.image
         }
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SecondViewHolder {
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_second,parent,false)
-            return  SecondViewHolder(view)
+            val binding = ItemSecondBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+            return  SecondViewHolder(binding)
         }
 
         override fun onBindViewHolder(holder: SecondViewHolder, position: Int) {
-            holder.image.setImageResource(secondList[position].image)
+            val currentItem =secondList[position]
             holder.menu.text = secondList[position].menu
+
+            Glide.with(holder.itemView)
+                .load(currentItem.image)
+                .into(holder.image)
 
         }
         override fun getItemCount(): Int {

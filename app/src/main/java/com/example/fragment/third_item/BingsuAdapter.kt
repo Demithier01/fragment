@@ -15,7 +15,7 @@ class BingsuAdapter(private val imageUrls: MutableList<String>, private val view
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BingsuViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.viewpager_bingsu, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.third_bingsu, parent, false)
         return BingsuViewHolder(view)
     }
 

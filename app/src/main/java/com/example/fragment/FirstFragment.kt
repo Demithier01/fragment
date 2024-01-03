@@ -26,7 +26,6 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         init(view)
     }
     private fun init(view: View) {
@@ -51,7 +50,6 @@ class FirstFragment : Fragment() {
         itemList.add(First("Jerry Cheesecake","https://shopee.co.th/blog/wp-content/uploads/2021/07/pic2-1.jpg"))
         itemList.add(First("Macaron","https://www.foxyfolksy.com/wp-content/uploads/2014/07/french-macarons-1200t.jpg"))
         itemList.add(First("MatchaGreentea Cheesecake","https://cdn.kuali.com/wp-content/uploads/2020/04/30181956/13.-Green-Tea-Bake-Cheesecake-281.jpg"))
-        itemList.add(First("Pancakes Raspberries","https://berryworld.imgix.net/assets/raspberrypancake_interactive-Large.jpg?auto=format&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=1500&ixlib=php-3.1.0&q=60&v=1634218605&w=2300"))
         itemList.add(First("Strawberry CrepeCake ","https://healthytasteoflife.com/wp-content/uploads/2022/05/strawberry-crepe-cake-featured-image-1.jpg"))
         itemList.add(First("Creme Brulee \nแครมบรูว์เล","https://www.recipetineats.com/wp-content/uploads/2016/09/Creme-Brulee_8-SQ.jpg"))
     }

@@ -8,20 +8,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.fragment.Model.First
+import com.example.fragment.databinding.ItemFirstBinding
 
 class ItemFirstAdapter(private val itemList:List<First>) :
 RecyclerView.Adapter<ItemFirstAdapter.ItemViewHolder>(){
 
-    inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val img : ImageView =itemView.findViewById(R.id.imgView)
-        val textView : TextView = itemView.findViewById(R.id.textView)
+    inner class ItemViewHolder(private val binding: ItemFirstBinding) : RecyclerView.ViewHolder(binding.root){
+        val img : ImageView = binding.imgView
+        val textView : TextView = binding.textView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-       val view = LayoutInflater.from(parent.context).inflate(R.layout.item_first,parent,false)
-        return ItemViewHolder(view)
-
-
+       val binding = ItemFirstBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return ItemViewHolder(binding)
     }
 
     override fun getItemCount(): Int {

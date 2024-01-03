@@ -3,15 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/LightGray"
+    android:background="@color/DesertSand"
     tools:context=".third_item.IceCreamFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Ice Cream \n ไอศกรีม"
-        android:textSize="40dp"
-        android:gravity="center"/>
+        android:text="Ice Cream"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="42dp"/>
 </FrameLayout>

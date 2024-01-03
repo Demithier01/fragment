@@ -97,10 +97,11 @@ class SecondFragment : Fragment() {
     }
 
     private fun addDataList() {
-        secondList.add(Second("Americano", R.drawable.americano))
-        secondList.add(Second("Coco", R.drawable.coco))
-        secondList.add(Second("Espresso", R.drawable.espresso))
-        secondList.add(Second("GreenTea", R.drawable.greentea))
-        secondList.add(Second("ThaiTea", R.drawable.thaitea))
+        secondList.add(Second("Americano", "https://www.aromathailand.com/wp-content/uploads/2023/09/Americano_pic3.jpeg"))
+        secondList.add(Second("Coco", "https://api2.krua.co/wp-content/uploads/2020/07/RD0198_Gallery_-02-scaled.jpg"))
+        secondList.add(Second("Espresso", "https://www.nestleprofessional.co.th/sites/default/files/styles/np_recipe_detail/public/2022-04/nescafe-iced-espresso-540x400.jpg?itok=cGl4pcYu"))
+        secondList.add(Second("GreenTea", "https://img.wongnai.com/p/1920x0/2019/02/02/1e0e327a52ce405196bb7242d22ea752.jpg"))
+        secondList.add(Second("ThaiTea", "https://madeinrecipes.com/wp-content/uploads/2021/06/%E0%B8%8A%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%84%E0%B8%B5%E0%B9%82%E0%B8%95-%E0%B8%8A%E0%B8%87%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2-%E0%B8%AB%E0%B8%AD%E0%B8%A1%E0%B9%83%E0%B8%9A%E0%B8%8A%E0%B8%B2-Keto-Thai-Tea.jpg"))
+
     }
 }
