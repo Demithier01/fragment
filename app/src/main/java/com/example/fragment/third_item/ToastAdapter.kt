@@ -9,16 +9,17 @@ import com.bumptech.glide.Glide
 import com.example.fragment.Model.First
 import com.example.fragment.Model.Toast
 import com.example.fragment.databinding.ItemFirstBinding
+import com.example.fragment.databinding.ItemThirdToastBinding
 import com.example.fragment.databinding.ThirdToastBinding
 
 class ToastAdapter(private val toastList: List<Toast>):
 RecyclerView.Adapter<ToastAdapter.ToastViewHolder>() {
-    class ToastViewHolder(private val binding: ThirdToastBinding) : RecyclerView.ViewHolder(binding.root){
+    class ToastViewHolder(private val binding: ItemThirdToastBinding) : RecyclerView.ViewHolder(binding.root){
         val nToast : TextView = binding.textNameToast
         val imgToast : ImageView = binding.imageToast
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToastViewHolder {
-       val binding = ThirdToastBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+       val binding = ItemThirdToastBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ToastViewHolder(binding)
     }
 
