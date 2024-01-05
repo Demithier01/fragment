@@ -31,7 +31,7 @@ RecyclerView.Adapter<ItemFirstAdapter.ItemViewHolder>(){
         val currentItem =itemList[position]
         holder.textView.text = itemList[position].name
         Glide.with(holder.itemView.context)
-            .load(currentItem.imgUrl)
-            .into(holder.img)
+            .load(currentItem.imgUrl) //โหลดภาพจากurl ที่กำหนดใน currentItem
+            .into(holder.img) //แสดงภาพที่โหลด
     }
 }

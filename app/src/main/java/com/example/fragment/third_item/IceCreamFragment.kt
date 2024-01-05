@@ -32,7 +32,7 @@ class IceCreamFragment : Fragment() {
             LinearLayoutManager(requireContext()) // Use requireContext() instead of this.context
 
         val textList = mutableListOf(
-            "Vanilla ",
+            "Vanilla",
             "Lemon Cheese Ice Cream Pie",
             "Strawberry",
             "Mint Chocolate Chip",
@@ -42,6 +42,7 @@ class IceCreamFragment : Fragment() {
             "Butterscotch",
             "Chocolate Peanut Butter"
         )
+        textList.remove("Vanilla")
         adapter = IceCreamAdapter(textList)
         iceCreamRecyclerView.adapter = adapter
     }

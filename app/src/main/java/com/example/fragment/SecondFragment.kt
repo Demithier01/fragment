@@ -35,6 +35,7 @@ class SecondFragment : Fragment() {
         init(view)
         setUpTransform()
 
+        //สร้าง Callback ให้กับ ViewPager2 ทำให้หน้าใน ViewPager2 ทำการสลับโดยอัตโนมัติ
         viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
@@ -45,12 +46,12 @@ class SecondFragment : Fragment() {
     }
     override fun onPause() {
         super.onPause()
-        handler.removeCallbacks(runnable)
+        handler.removeCallbacks(runnable) //จะหยุดการทำงานของ runnable
     }
 
     override fun onResume() {
         super.onResume()
-        handler.postDelayed(runnable, 2000)
+        handler.postDelayed(runnable, 2000) //เปลี่ยนหน้าใน ViewPager2 ทุก ๆ 2 วินาที
     }
 
     private val runnable = Runnable {
@@ -62,7 +63,7 @@ class SecondFragment : Fragment() {
         transformer.addTransformer(MarginPageTransformer(40))
         transformer.addTransformer { page, position ->
             val r = 1 - Math.abs(position)
-            page.scaleY = 0.85f + r * 0.14f
+            page.scaleY = 0.85f + r * 0.14f //กำหนดขนาดรูปภาพที่ใช้แสดง
         }
         viewPager2.setPageTransformer(transformer)
     }
@@ -73,7 +74,7 @@ class SecondFragment : Fragment() {
         secondList = ArrayList()
         secondRecyclerView = view.findViewById(R.id.recyclerView1)
         secondRecyclerView.setHasFixedSize(true)
-        secondRecyclerView.layoutManager = LinearLayoutManager(requireContext()) // Use requireContext() instead of this.context
+        secondRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         val imageUrl = mutableListOf(
             "https://f.ptcdn.info/467/059/000/pe8fyp1u2KWzzTuJad5-o.jpg",

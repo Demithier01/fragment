@@ -32,6 +32,7 @@ class ThirdFragment : Fragment() {
 
         viewPager.adapter = ItemThirdAdapter(childFragmentManager, lifecycle)
 
+        //ใช้TabLayoutMediator เชื่อม TabLayout และ ViewPager2 กำหนดชื่อแท็บจาก tabTitles ให้กับแต่ละแท็บ
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = tabTitles[position]
         }.attach()

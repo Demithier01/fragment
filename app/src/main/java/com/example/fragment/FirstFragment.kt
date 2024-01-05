@@ -31,6 +31,7 @@ class FirstFragment : Fragment() {
         itemList = ArrayList()
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.setHasFixedSize(true)
+        // กำหนด LayoutManager ให้กับ RecyclerView เป็น StaggeredGridLayoutManager แบ่งเป็น2 คอลัม
         recyclerView.layoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 

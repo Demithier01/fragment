@@ -23,7 +23,7 @@ RecyclerView.Adapter<ToastAdapter.ToastViewHolder>() {
         return ToastViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ToastAdapter.ToastViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ToastViewHolder, position: Int) {
         val currentItem =toastList[position]
         holder.nToast.text = toastList[position].nToast
 
