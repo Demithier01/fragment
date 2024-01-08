@@ -4,19 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/LightBlue"
+    android:background="@color/SandyBrown"
     tools:context=".third_item.BingsuFragment">
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/LightGold">
+        android:text="BingSu"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/WhiteSmoke"
+        android:gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvBingSu"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"/>
 
 
 </FrameLayout>

@@ -14,7 +14,7 @@
         android:layout_marginBottom="10dp"
         android:text="Toast ปังปิ้ง"
         android:textSize="28dp"
-        android:textColor="@color/White"/>
+        android:textColor="@color/WhiteSmoke"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reView"
