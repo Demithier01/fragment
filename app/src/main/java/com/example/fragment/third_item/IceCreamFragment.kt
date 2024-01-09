@@ -43,6 +43,8 @@ class IceCreamFragment : Fragment() {
             "Chocolate Peanut Butter"
         )
         textList.remove("Vanilla")
+        textList.remove("Pistachio")
+        textList.add("butter")
         adapter = IceCreamAdapter(textList)
         iceCreamRecyclerView.adapter = adapter
     }
